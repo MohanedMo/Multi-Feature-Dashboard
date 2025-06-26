@@ -1,12 +1,10 @@
 import "./loading.css"
-import { Icon } from "@iconify/react";
 
 const LoadingComponent = () => {
     return ( 
         <div className="container">
         <div className="card">
           <div className="card-header">
-            <Icon icon="flat-color-icons:like" />
             <h1 className="card-title">Blog Posts Dashboard</h1>
           </div>
           <div className="card-content">

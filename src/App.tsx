@@ -15,7 +15,10 @@ function App() {
   
   if(!loading){
     return (
+      <>
       <LoadingComponent/>
+      <Loves lovesNumbers={200}/>
+      </>
     )
   }
 

@@ -1,11 +1,11 @@
 import { Icon } from "@iconify/react";
 import "./loves.css"
 
-const Loves = () => {
+const Loves = ({lovesNumbers} : { lovesNumbers: number }) => {
     return ( 
         <div className="loves-container">
             <Icon icon="flat-color-icons:like" />
-            <span>2214</span>
+            <span>{lovesNumbers}</span>
         </div>
      );
 }
