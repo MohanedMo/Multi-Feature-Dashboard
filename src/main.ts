@@ -1,12 +1,12 @@
+import { Component } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideRouter, Routes } from '@angular/router';
-import { CurrentWeatherComponent } from './app/components/current-weather/current-weather.component';
-import { ForecastComponent } from './app/components/forecast/forecast.component';
-import { Component } from '@angular/core';
+import { provideHttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './app/components/header/header.component';
-
+import { CurrentWeatherComponent } from './app/components/current-weather/current-weather.component';
+import { ForecastComponent } from './app/components/forecast/forecast.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/current', pathMatch: 'full' },
@@ -20,7 +20,7 @@ const routes: Routes = [
   standalone: true,
   imports: [CommonModule, RouterOutlet, HeaderComponent],
   template: `
-  <div class="app">
+    <div class="app">
       <app-header></app-header>
       <main class="main-content">
         <div class="container">
@@ -28,13 +28,29 @@ const routes: Routes = [
         </div>
       </main>
     </div>
-    `
-})
+  `,
+  styles: [`
+    .app {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
 
+    .main-content {
+      padding-bottom: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .main-content {
+        padding-bottom: 20px;
+      }
+    }
+  `]
+})
 export class App {}
 
 bootstrapApplication(App, {
   providers: [
-    provideRouter(routes)
+    provideRouter(routes),
+    provideHttpClient()
   ]
 });
