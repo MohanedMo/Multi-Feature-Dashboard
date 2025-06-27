@@ -21,17 +21,31 @@ interface ApiResponse {
   skip: number
   limit: number
 }
+interface Post{
+    id: number;
+    title: string;
+    body: string;
+    tags: string[];
+    reactions: {
+      likes: number;
+      dislikes: number;
+    };
+    views: number;
+    userId: number;
+}
+
 
 function App() {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate()
   const currentPage = parseInt(searchParams.get("page") || "1", 10);
 
-  const [posts, setPosts] = useState([])
+  const [posts, setPosts] = useState<Post[]>([])
   const [inputValue, setInputValue] = useState("")
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [totalPosts, setTotalPosts] = useState(0)
+  const [secondLargestViews, setSecondLargestViews] = useState(0)
   const postsPerPage = 10
   const totalPages = Math.ceil(totalPosts / postsPerPage)
   const startIndex = (currentPage - 1) * postsPerPage + 1
@@ -73,16 +87,30 @@ function App() {
   useEffect(() => {
     debounce(() => fetchPosts(currentPage, postsPerPage, inputValue), 300)
   }, [currentPage, inputValue, fetchPosts])
+  
+  useEffect(() => {
+    findSecondLargest(posts)
+  }, [posts])
 
   
   function onChange(value:string){
-    setInputValue(value)  
+      const sanitizeInput =  (str: string): string => {
+    return str.trim().replace(/[^a-zA-Z0-9\s\-_.]/g, "");
+  }
+    setInputValue(sanitizeInput(value))  
     const params = new URLSearchParams(searchParams);
     params.set("page", "1");
     navigate({ search: params.toString() });
   }
   function clearSearch(){
     setInputValue('')
+  }
+
+  function findSecondLargest(posts: Post[]){
+    const postsViewsArray = posts.map(post => post.views)
+    postsViewsArray.sort((a, b) => b-a)
+    console.log(postsViewsArray);
+    setSecondLargestViews(postsViewsArray[1])
   }
 
   if (error) {
@@ -129,7 +157,7 @@ function App() {
                   </thead>
                   <tbody>
                     {posts.map((post, index) => (
-                      <DesktopCard key={index} post={post}/>
+                      <DesktopCard key={index} post={post} secondLargest={secondLargestViews}/>
                     ))}
                   </tbody>
                 </table>

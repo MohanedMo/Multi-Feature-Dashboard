@@ -15,9 +15,10 @@ interface Post {
     views: number;
     userId: number;
   };
+  secondLargest: number
 }
 
-const DesktopCard = ({ post }: Post) => {
+const DesktopCard = ({ post, secondLargest }: Post) => {
   const stateList = [
     {
       name: "flat-color-icons:like",
@@ -36,7 +37,7 @@ const DesktopCard = ({ post }: Post) => {
     },
   ];
   return (
-    <tr key={post.id}>
+    <tr key={post.id} style={{ backgroundColor: secondLargest === post.views ? "#2dff00" : "" }}>
       <td style={{ fontWeight: "500" }}>{post.id}</td>
       <td>
         <div style={{ fontWeight: "500", width: "220px" }}>{post.title}</div>
