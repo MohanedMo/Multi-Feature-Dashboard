@@ -1,8 +1,8 @@
-const Heading = () => {
+const Heading = ({header, details}: {header: string, details: string}) => {
     return ( 
         <>
-        <h2 className="personal-heading">services</h2>
-        <p>Don't be busy, be productive</p>
+        <h2 className="personal-heading">{header}</h2>
+        <p>{details}</p>
         </>
      );
 }
