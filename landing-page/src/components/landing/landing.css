@@ -1,0 +1,25 @@
+.landing{
+    background-image: url('../../assets/images/686998.jpg');
+    background-size: cover;
+    height: calc(100vh - 64px);
+}
+section .intro-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 320px;
+    max-width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+section .intro-text h1{
+    color: var(--main-color);
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+}
+section .intro-text p{
+    line-height: 1.8;
+    font-size: 19px;
+    margin: 0;
+}
