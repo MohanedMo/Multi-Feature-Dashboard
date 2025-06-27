@@ -4,9 +4,6 @@ const LoadingComponent = () => {
     return ( 
         <div className="container">
         <div className="card">
-          <div className="card-header">
-            <h1 className="card-title">Blog Posts Dashboard</h1>
-          </div>
           <div className="card-content">
             <div className="skeleton skeleton-input"></div>
             <div style={{ marginTop: "1rem" }}>

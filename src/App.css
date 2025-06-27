@@ -63,3 +63,78 @@
 .table tr:hover {
   background-color: #f9fafb;
 }
+
+/* Responsive design */
+@media (min-width: 640px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .search-section {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .search-container {
+    flex: 1;
+  }
+
+  .pagination-stats {
+    text-align: left;
+  }
+
+  .button-sm .button-text {
+    display: inline;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-cards {
+    display: none;
+  }
+
+  .table-tablet {
+    display: table;
+  }
+
+  .page-info-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .table-tablet {
+    display: none;
+  }
+
+  .table-desktop {
+    display: table;
+  }
+}
+
+@media (max-width: 767px) {
+  .mobile-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .table-desktop,
+  .table-tablet {
+    display: none;
+  }
+
+  .page-info-mobile {
+    display: block;
+  }
+
+  .button-text {
+    display: none;
+  }
+
+  .page-numbers {
+    max-width: 12rem;
+    overflow: hidden;
+  }
+}
