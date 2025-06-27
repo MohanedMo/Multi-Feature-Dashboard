@@ -1,0 +1,18 @@
+.state-container{
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    font-size: 14px;
+}
+
+.stats-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
