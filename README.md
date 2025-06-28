@@ -1,80 +1,90 @@
-🧩 Multi-Feature Dashboard Application
-This repository contains a collection of front-end mini-projects built with React and Angular, designed to showcase various essential development skills, including API integration, responsive design, local storage handling, unit testing, and Git workflow.
+# 🧩 Multi-Feature Dashboard Application
 
-📌 Projects Overview
-1. ✅ To-Do List (React)
+This repository contains a collection of front-end mini-projects built with **React** and **Angular**, designed to showcase various essential development skills, including API integration, responsive design, local storage handling, unit testing, and Git workflow.
+
+---
+
+## 📌 Projects Overview
+
+### 1. ✅ To-Do List (React)
 A simple and interactive task manager.
 
-Add/delete tasks
+**Key Features:**
+- Add / delete tasks
+- Mark tasks as complete/incomplete
+- Persistent storage via `localStorage`
+- Responsive layout using Flexbox
+- Unit tested with **Jest**
 
-Mark tasks as complete/incomplete
+**Tech Stack:** React, useState/useEffect, CSS (Flexbox), Jest  
+🔗 **Live Demo:** [https://to-do-mo.vercel.app/](https://to-do-mo.vercel.app/)
 
-Persistent storage via localStorage
+---
 
-Responsive layout using Flexbox
-
-Unit tested with Jest
-
-Tech: React, useState/useEffect, CSS (Flexbox), Jest
-🔗 Live Demo
-
-2. 🌤️ Weather Dashboard (Angular)
+### 2. 🌤️ Weather Dashboard (Angular)
 Search for cities and view current weather and a 5-day forecast.
 
-Angular routing between views
+**Key Features:**
+- Angular routing between views
+- Fetch data from external API
+- Display current weather and forecast
+- Unit testing with **Jest**
 
-Fetch data from external API
+**Tech Stack:** Angular, Angular Router, HttpClient, Angular Forms, CSS  
+🔗 **Live Demo:** [https://weather-app-lime-ten-61.vercel.app/current](https://weather-app-lime-ten-61.vercel.app/current)
 
-Display current weather and forecast
+---
 
-Unit testing with Jest
-
-Tech: Angular, Angular Router, HttpClient, Forms, CSS
-🔗 Live Demo
-
-3. 👤 Users Viewer (Angular)
+### 3. 👤 Users Viewer (Angular)
 View a list of users and detailed profiles with loading/error handling.
 
-API integration and error handling
+**Key Features:**
+- API integration and error handling
+- Clean and responsive UI
+- State management with Angular Services
 
-Clean and responsive UI
+**Tech Stack:** Angular, HttpClient, Services, Flexbox, Data Binding  
+🔗 **Live Demo:** [https://users-website-mo.vercel.app/](https://users-website-mo.vercel.app/)
 
-State management with services
+---
 
-Tech: Angular, HttpClient, Services, Flexbox, Data Binding
-🔗 Live Demo
-
-4. 📱 Responsive Design Page (React)
+### 4. 📱 Responsive Design Page (React)
 A mobile-first landing page built from a PSD design.
 
-Pixel-perfect layout
+**Key Features:**
+- Pixel-perfect layout
+- Responsive nav bar and hero section
+- Grid-based layout with Flexbox and media queries
 
-Responsive nav bar and hero section
+**Tech Stack:** React, CSS Grid/Flexbox, Media Queries  
+🔗 **Live Demo:** [https://leon214521.vercel.app/](https://leon214521.vercel.app/)
 
-Grid-based layout with Flexbox and media queries
+---
 
-Tech: React, CSS Grid/Flexbox, Media Queries
-🔗 Live Demo
-
-5. 📰 Posts API Integration with Search (React)
+### 5. 📰 Posts API Integration with Search (React)
 A blog post explorer with live search and pagination.
 
-Fetch blog posts from an API
+**Key Features:**
+- Fetch blog posts from an API
+- Search posts by title (real-time)
+- Pagination for large datasets
+- Handle loading and error states
+- Responsive table layout
+- Utility function to find the second-largest post by views
 
-Search posts by title
+**Tech Stack:** React, Fetch API, useState/useEffect, CSS Flexbox  
+🔗 **Live Demo:** [https://posts-website-theta.vercel.app/](https://posts-website-theta.vercel.app/)
 
-Handle loading and error states
+---
 
-Responsive table layout
+### 🚀 All-in-One Landing Page  
+Explore all projects from one place:  
+🔗 **[https://all-projects-one.vercel.app/](https://all-projects-one.vercel.app/)**
 
-Includes utility: Find second-largest post by views
+---
 
-Tech: React, Fetch API, useState/useEffect, Flexbox
-🔗 Live Demo
+## 📝 Notes
 
-🚀 All-in-One Landing Page
-🔗 Explore All Projects
-
-📝 Notes
-This was my first time working with tools like Angular, Jest, and Jasmine for unit testing. I made a strong effort to research, learn, and apply best practices to deliver each project at a high standard. This experience significantly enhanced my development and problem-solving skills.
-
+> This was my first time working with tools like **Angular**, **Jest**, and **Jasmine** for unit testing.  
+> I made a strong effort to research, learn, and apply best practices to deliver each project at a high standard.  
+> This experience significantly enhanced my development and problem-solving skills.
