@@ -1,69 +1,90 @@
-# React + TypeScript + Vite
+# 🧩 Multi-Feature Dashboard Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains a collection of front-end mini-projects built with **React** and **Angular**, designed to showcase various essential development skills, including API integration, responsive design, local storage handling, unit testing, and Git workflow.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Projects Overview
 
-## Expanding the ESLint configuration
+### 1. ✅ To-Do List (React)
+A simple and interactive task manager.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**Key Features:**
+- Add / delete tasks
+- Mark tasks as complete/incomplete
+- Persistent storage via `localStorage`
+- Responsive layout using Flexbox
+- Unit tested with **Jest**
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+**Tech Stack:** React, useState/useEffect, CSS (Flexbox), Jest  
+🔗 **Live Demo:** [https://to-do-mo.vercel.app/](https://to-do-mo.vercel.app/)
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 2. 🌤️ Weather Dashboard (Angular)
+Search for cities and view current weather and a 5-day forecast.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+**Key Features:**
+- Angular routing between views
+- Fetch data from external API
+- Display current weather and forecast
+- Unit testing with **Jest**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+**Tech Stack:** Angular, Angular Router, HttpClient, Angular Forms, CSS  
+🔗 **Live Demo:** [https://weather-app-lime-ten-61.vercel.app/current](https://weather-app-lime-ten-61.vercel.app/current)
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+### 3. 👤 Users Viewer (Angular)
+View a list of users and detailed profiles with loading/error handling.
+
+**Key Features:**
+- API integration and error handling
+- Clean and responsive UI
+- State management with Angular Services
+
+**Tech Stack:** Angular, HttpClient, Services, Flexbox, Data Binding  
+🔗 **Live Demo:** [https://users-website-mo.vercel.app/](https://users-website-mo.vercel.app/)
+
+---
+
+### 4. 📱 Responsive Design Page (React)
+A mobile-first landing page built from a PSD design.
+
+**Key Features:**
+- Pixel-perfect layout
+- Responsive nav bar and hero section
+- Grid-based layout with Flexbox and media queries
+
+**Tech Stack:** React, CSS Grid/Flexbox, Media Queries  
+🔗 **Live Demo:** [https://leon214521.vercel.app/](https://leon214521.vercel.app/)
+
+---
+
+### 5. 📰 Posts API Integration with Search (React)
+A blog post explorer with live search and pagination.
+
+**Key Features:**
+- Fetch blog posts from an API
+- Search posts by title (real-time)
+- Pagination for large datasets
+- Handle loading and error states
+- Responsive table layout
+- Utility function to find the second-largest post by views
+
+**Tech Stack:** React, Fetch API, useState/useEffect, CSS Flexbox  
+🔗 **Live Demo:** [https://posts-website-theta.vercel.app/](https://posts-website-theta.vercel.app/)
+
+---
+
+### 🚀 All-in-One Landing Page  
+Explore all projects from one place:  
+🔗 **[https://all-projects-one.vercel.app/](https://all-projects-one.vercel.app/)**
+
+---
+
+## 📝 Notes
+
+> This was my first time working with tools like **Angular**, **Jest**, and **Jasmine** for unit testing.  
+> I made a strong effort to research, learn, and apply best practices to deliver each project at a high standard.  
+> This experience significantly enhanced my development and problem-solving skills.
