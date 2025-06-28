@@ -28,7 +28,7 @@ const routes = [
   {
     path: '',
     component: UserListComponent,
-    title: 'Users Directory'
+    title: 'Users'
   },
   {
     path: 'user/:id',

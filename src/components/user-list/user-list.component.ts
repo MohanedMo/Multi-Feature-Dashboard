@@ -10,14 +10,14 @@ import { User } from '../../models/user.model';
   imports: [CommonModule],
   template: `
     <div class="container">
-      <h1 class="title">Users Directory</h1>
-      
+      <h1 class="title">Users</h1>
+
       <!-- Loading State -->
       <div *ngIf="loading" class="loading-container">
         <div class="spinner"></div>
         <p>Loading users...</p>
       </div>
-      
+
       <!-- Error State -->
       <div *ngIf="error" class="error-container">
         <div class="error-icon">⚠️</div>
@@ -25,11 +25,11 @@ import { User } from '../../models/user.model';
         <p>{{ error }}</p>
         <button class="retry-btn" (click)="loadUsers()">Try Again</button>
       </div>
-      
+
       <!-- Success State -->
       <div *ngIf="!loading && !error && users.length > 0" class="users-grid">
-        <div 
-          *ngFor="let user of users" 
+        <div
+          *ngFor="let user of users"
           class="user-card"
           (click)="viewUserDetails(user.id)"
         >
@@ -45,7 +45,7 @@ import { User } from '../../models/user.model';
           <div class="arrow">→</div>
         </div>
       </div>
-      
+
       <!-- Empty State -->
       <div *ngIf="!loading && !error && users.length === 0" class="empty-container">
         <div class="empty-icon">👥</div>
@@ -203,11 +203,11 @@ import { User } from '../../models/user.model';
       .users-grid {
         grid-template-columns: 1fr;
       }
-      
+
       .user-card {
         padding: 20px;
       }
-      
+
       .title {
         font-size: 2rem;
       }
@@ -231,7 +231,7 @@ export class UserListComponent implements OnInit {
   loadUsers(): void {
     this.loading = true;
     this.error = null;
-    
+
     this.userService.getUsers().subscribe({
       next: (users) => {
         this.users = users;
